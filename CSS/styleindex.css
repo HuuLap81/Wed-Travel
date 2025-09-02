@@ -1,0 +1,190 @@
+body{
+    overflow-x: hidden;
+}
+.content-header{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.content-logo{
+    width: 20%;
+    margin-left: 2%;
+}
+.content-logo img{
+   width: 65px;
+   height: 65px;
+   margin-top: -5px;
+}
+
+.content-menu{
+    width: 40%;
+    margin-left: 15%;
+}
+
+ .content-menu ul{
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .content-menu a{
+    list-style: none;
+    text-decoration: none;
+    color: #07A0C5;
+ }
+ .content-menu li{
+    list-style: none;
+   
+ }
+ .content-search{
+    width: 30%;
+   margin-top: 15px;
+   margin-left: 20%;
+   margin-right: -5%;
+ }
+ .content-search button{
+   background-color: black;
+   color: white;
+ }
+
+.custom-line {
+  border: none;              /* bỏ viền mặc định */
+  height: 2px;               /* độ dày */
+  background: #ff6600;       /* màu cam */
+  margin: 20px 0;            /* khoảng cách trên dưới */
+  border-radius: 50px;        /* bo tròn hai đầu */
+}
+
+
+ .title{
+    color: red;
+    text-align: center;
+ }
+
+.iphone16{
+    display: flex;
+}
+.img-big{
+    width: 30%;
+    border: 3px solid #cecbcb ;
+    background-color: white;
+}
+.img-big img{
+    width: 95%;
+    height: 449px;
+    margin-top: 15px;
+    margin-left: 2%;
+   
+}
+.img-2{
+    width: 28%;
+    border: 3px solid #ddd ;
+    background-color: white;
+    margin-left: 36px;
+    
+}
+.img-2 img{
+    width: 94%;
+    margin-top: 16px;
+    height: 209px;
+    margin-left: 3%;
+    
+
+}
+.noidung-dt{
+    width: 50%;
+    height: 478px;
+    margin-left: 28px;
+    border: 3px solid #cecbcb;
+    background-color: white;
+    padding-right: 2%;
+}
+.noidung-dt h2{
+    color: #07A0C5;
+    margin-left: 18%;
+    font-size: 27px;
+}
+.noidung-dt p{
+    text-align: justify;
+    margin-left: 6%;
+    font-size: 20px;
+}
+
+.giohang1 button{
+    width: 105%;
+    background-color: orange;
+    padding-left: 171px;
+    padding-right: 177px;
+    padding-top: 10px;
+    padding-bottom: 14px;
+    margin-top: 20px;
+    color: white;
+    border: none;
+
+}
+
+.tainghe{
+    display: flex;
+    margin-left: -14px;
+
+}
+
+.item-4{
+    width: 22%;
+    margin-left: 15px;
+    padding-left: 2%;
+    border: 3px solid #cecbcb;
+    background-color: white;
+    
+}
+.item-4 img{
+    width: 90%;
+}
+.item-4 h3{
+    color: #07A0C5;
+    text-align: center;
+
+}
+ .item-4 button{
+    padding-top: 10px;
+    padding-right: 3px;
+    background-color: orange;
+    color: white;
+    margin-left: -9%;
+    border: none;
+    margin-top: -13px;
+    width: 109%;
+    padding-bottom: 10px;
+ }
+ 
+ .giohang11 button{
+    margin-top: 18px;
+ }
+ .giohang2 button{
+    margin-top: 2px;
+ }
+.yourcart{
+    border: 3px solid #cecbcb;
+    background-color: rgb(247, 242, 242);
+    margin-top: 21px;
+    margin-bottom: 15px;
+}
+.yourcart h2{
+    border:  1px solid rgb(207, 204, 204);
+    background-color: rgb(240, 212, 217);
+    margin-top: 0px;
+}
+
+
+ .footer{
+    text-align: center;
+    background-color: #07A0C5;
+    padding-bottom: 22px;
+    padding-top: 13px;
+    margin-left: -9px;
+    margin-right: -10px;
+ }
+ .footer p{
+    margin-bottom: 0px;
+ }
+
+

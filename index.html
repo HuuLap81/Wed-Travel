@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Apple Mobile</title>
+
+<!--Embed your css here-->
+<link rel="stylesheet" href="CSS/styleindex.css">
+
+
+</head>
+
+<body>
+	
+	<div> <!--div contains all the web page content-->
+		
+		<div class="content-header"> <!--div contains header content-->
+
+			<div class="content-logo">
+				<a href="index.html"><img src="images/logochanel.png"></a>
+			</div>
+
+			<div class="content-menu"> 
+			  <ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Product</a></li>
+				<li><a href="#">Accessories</a></li>
+				<li><a href="#">Contact</a></li>
+			  </ul>  
+			</div>
+
+			<div class="content-search">
+				<form>
+					<input type="text" placeholder="Search in website">
+					<button type="submit">Search</button>
+				</form>
+
+			</div>		
+
+		</div> <!--div contains header content-->
+		<hr>
+		<!-------------------------------------------------------------------------------------------------------------->
+
+		<div > <!--div contains Best Sellers content-->
+
+			<h1 class="title">Best Sellers</h1>
+
+			<div class="iphone16">
+
+				<div class="img-big">
+					<img src="images/iphone16prmax.png" alt="Iphone 16 pro Max" />
+				</div>
+
+				<div class="img-2">
+					<img src="images/camera.png" alt="Camera" />
+					<img src="images/Bosac.png" alt="Charger" />
+
+				</div>
+
+				<div class="noidung-dt">
+					<h2>Iphone 16 pro Max - 521GB - $1800</h2>
+
+					<p>
+						The iPhone 16 Pro Max boasts an impressive camera system designed for photography enthusiasts. It features a 48MP primary sensor with quad pixels and a 24mm equivalent f/1.78 aperture lens, offering excellent detail and dynamic range. Additionally, it includes a 48MP ultra-wide camera with a 13mm equivalent lens and a 12MP telephoto camera with a 120mm equivalent lens. The telephoto lens uses a tetraprism design for enhanced optical zoom.
+					</p>
+
+					<p>
+						This camera system excels in various lighting conditions, from bright outdoor settings to low-light environments. It also delivers outstanding video quality with 4K resolution and a variable frame rate of 60fps. The iPhone 16 Pro Max is perfect for capturing stunning photos and videos, whether you're shooting landscapes, portraits, or action shots.
+
+					</p>
+
+						<div class="giohang1">
+							<button>Add to Cart</button>
+						</div>
+
+			    </div>
+
+				
+			</div>
+
+			<div style="clear: both;"></div>
+			
+		</div> <!--div contains Best Sellers content-->
+
+		<!-------------------------------------------------------------------------------------------------------------->
+
+		<div> <!--div contains Accessories content-->
+
+		<h1 class="title">Accessories</h1>
+		  <div class="tainghe">
+				<div class="item-4">
+			
+					<h3>Airpod 4 - $150</h3>
+					
+					<img src="images/Airpod4.png" alt="Airpod 4"/>
+				
+					<div class="giohang11">
+					<button>Add to Cart</button>
+					</div>
+				
+			    </div>
+
+			    <div class="item-4">
+					<h3>AirTag - $35</h3>
+					
+					<img src="images/Airtag.png" alt="Airtag"/>
+					
+					<div class="giohang2">
+						<button >Add to Cart</button>
+					</div>
+
+			</div>
+
+			<div class="item-4">
+			
+				<h3>Apple Watch Series 10 - $1000</h3>
+				
+				<img src="images/AppleWatch10.png" alt="Apple Watch Series 10"/>
+				
+				<div> 
+					<button>Add to Cart</button>
+				</div>
+				
+			</div>
+
+			<div class="item-4">
+				<h3>Iphone 16 Pro Max Bumper - $12</h3>
+				
+				<img src="images/oplung.png" alt="Iphone 16 Pro Max Bumper"/>
+				
+				<div>
+					<button >Add to Cart</button>
+				</div>
+				
+			</div>
+
+			<div style="clear: both;"></div>
+			
+		  </div>
+
+
+
+		</div>	<!-- finish div contains Accessories content-->
+
+		<!-------------------------------------------------------------------------------------------------------------->
+
+		 <div class="yourcart"> <!--div contains Your Cart content-->
+
+			<h2>Your Cart</h2>
+			
+			<div>
+
+				<ul>
+					<p>Your cart is empty.</p>
+				</ul>
+				<h3>Total: $0</h3>
+
+			</div>
+			
+		 </div> <!-- finish div contains Your Cart content-->
+
+	   <!--------------------------------------------------------------------------------------------------------------->   
+
+		<div class="footer"> <!--div contains footer content-->
+
+			<p>Email : Apple@gmail.com</p>
+			<p>Address: 100 Dien Bien Phu,District 3, HCMC</p>
+			<p>Phone : 012456789222</p>
+
+		</div> <!-- finish div contains footer content-->
+		
+	</div> <!-- finish div contains all the web page content-->
+
+ 	<!--------------------------------------------------------------------------------------------------------------->   
+	
+	<script>
+		//Write your Javascript code here
+		// Giỏ hàng
+		let cartItems = [];
+		let totalPrice = 0;
+
+		// Lấy tất cả nút "Add to Cart"
+		const buttons = document.querySelectorAll("button");
+
+		// Vòng lặp gắn sự kiện click cho từng nút
+		buttons.forEach(button => {
+		button.addEventListener("click", function() {
+			// Lấy thông tin sản phẩm (nằm ở thẻ h2 hoặc h3 gần nút)
+			let productInfo = this.parentElement.parentElement.querySelector("h2, h3").innerText;
+
+			// Tách tên và giá
+			let name = productInfo.split(" - $")[0];
+			let price = parseFloat(productInfo.split(" - $")[1]);
+
+			// Thêm sản phẩm vào giỏ
+			cartItems.push({ name, price });
+			totalPrice += price;
+
+			// Cập nhật giao diện giỏ hàng
+			updateCart();
+		});
+		});
+
+		// Hàm cập nhật giỏ hàng
+		function updateCart() {
+		let cartList = document.querySelector(".yourcart ul");
+		let totalText = document.querySelector(".yourcart h3");
+
+		// Nếu giỏ rỗng
+		if (cartItems.length === 0) {
+			cartList.innerHTML = "<p>Your cart is empty.</p>";
+		} else {
+			// Hiển thị danh sách sản phẩm
+			cartList.innerHTML = "";
+			cartItems.forEach(item => {
+			let li = document.createElement("li");
+			li.textContent = `${item.name} - $${item.price}`;
+			cartList.appendChild(li);
+			});
+		}
+
+		// Cập nhật tổng
+		totalText.textContent = `Total: $${totalPrice}`;
+	    }
+
+	
+	</script>
+	
+	
+	
+	
+</body>
+
+
+</html>
+
+
